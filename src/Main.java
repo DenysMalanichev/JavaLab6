@@ -17,10 +17,8 @@ public class Main {
 
         System.out.println("----------------------------");
 
+        System.out.println("Sorted by price: ");
         playroom.sortByPrice();
-
-        System.out.println("----------------------------");
-
         playroom.displayToys();
 
         System.out.println("----------------------------");
@@ -31,6 +29,11 @@ public class Main {
         System.out.println("Enter max price for search: ");
         double maxPrice = getNum();
 
+        findToysInPriceRange(playroom, minPrice, maxPrice);
+
+    }
+
+    private static void findToysInPriceRange(Playroom playroom, double minPrice, double maxPrice) {
         ArrayList<Toy> toysInRange = playroom.findToysInPriceRange(minPrice, maxPrice);
         if(!toysInRange.isEmpty()){
             System.out.println("\nToys in the price range of $" + minPrice + " to $" + maxPrice + ":");
@@ -41,7 +44,6 @@ public class Main {
         else {
             System.err.println("No games in given range ($" + minPrice + " to $" + maxPrice + ").");
         }
-
     }
 
     private static int getNum() {

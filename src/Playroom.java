@@ -39,7 +39,6 @@ public class Playroom {
     }
 
     public void displayToys() {
-        System.out.println("Toys in the playroom:");
         for (Toy toy : toys) {
             System.out.println(toy);
         }
