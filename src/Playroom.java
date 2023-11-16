@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Playroom {
-    private ArrayList<Toy> toys = new ArrayList<>();
+    private OwnList toys = new OwnList();
     private double budget;
 
     public Playroom(double budget) {
